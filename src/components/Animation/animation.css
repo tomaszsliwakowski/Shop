@@ -1,0 +1,77 @@
+.addAnim.none {
+  display: none;
+}
+
+.addAnim.active {
+  right: 12px;
+  top: 10vh;
+  position: fixed;
+  border: 1px solid green;
+  width: 180px;
+  height: 40px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.SuccesAnim.none {
+  display: none;
+}
+
+.SuccesAnim.active {
+  position: fixed;
+  background-color: lightgreen;
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+@media screen and (max-width: 450px) {
+  .SuccesAnim h2 {
+    font-size: 5vw;
+  }
+}
+
+.SuccesAnim div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  position: relative;
+  top: 0px;
+}
+
+.SuccesAnim div svg {
+  font-size: 60px;
+  color: black;
+}

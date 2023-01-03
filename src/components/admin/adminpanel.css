@@ -1,0 +1,220 @@
+.admin_panel {
+  height: 93vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+}
+
+.admin_panel_menu.active {
+  max-width: 250px;
+  min-width: 250px;
+  overflow: hidden;
+  height: 93vh;
+  background-color: white;
+  border-right: 1px solid silver;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+}
+
+.admin_panel_menu.none {
+  display: flex;
+  width: 80px;
+  height: 100%;
+  min-height: 93vh;
+  background-color: white;
+  border-right: 1px solid silver;
+  position: relative;
+}
+
+.admin_menu.active {
+  width: 100%;
+  margin-top: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.admin_small_menu.active {
+  display: none;
+}
+
+.admin_small_menu.none {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 70px;
+}
+
+.admin_small_menu.none button {
+  padding: 0px 2px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+.admin_menu.active button {
+  padding: 0px 2px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 15px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+}
+
+.admin_menu.active button svg {
+  font-size: 30px;
+}
+
+.admin_small_menu.none button svg {
+  font-size: 30px;
+}
+.admin_small_menu.none button svg:active {
+  transform: scale(1.05);
+}
+
+.admin_small_menu.none p {
+  font-size: 25px;
+}
+
+.admin_menu.none {
+  display: none;
+}
+
+.admin_menu span {
+  text-align: center;
+}
+
+.admin_menu p:nth-child(3),
+.admin_menu p:nth-child(4) {
+  cursor: pointer;
+}
+.admin_small_menu p:nth-child(3),
+.admin_small_menu p:nth-child(4) {
+  cursor: pointer;
+}
+
+.admin_menu span svg {
+  font-size: 18px;
+}
+.admin_menu span p:nth-child(1) {
+  font-size: 18px;
+}
+
+.admin_menu span p:nth-child(2) {
+  font-weight: 500;
+  color: rgb(0, 130, 250);
+}
+
+.admin_small_menu a {
+  color: black;
+}
+
+.menu_order {
+  position: relative;
+  top: 5%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.menu_order a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+}
+.menu_order svg {
+  font-size: 20px;
+}
+
+.admin_panel a.active svg {
+  color: rgb(0, 130, 250);
+}
+
+.admin_panel_reasult {
+  height: 100%;
+  background-color: white;
+  width: 100%;
+}
+.admin_panel_reasult.active {
+  width: 100%;
+  margin-left: 76.4px;
+}
+
+.orders {
+  width: 100%;
+  background-color: aqua;
+  height: 20%;
+}
+
+.admin_products {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add_products {
+  height: 100%;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+.add_products form {
+  width: 70%;
+  height: 50%;
+  position: relative;
+  top: 140px;
+}
+.add_products h2 {
+  position: relative;
+  top: -30px;
+}
+
+.add_products form input {
+  margin-bottom: 4%;
+  width: 70%;
+  font-size: 16px;
+}
+.add_products form input:nth-last-child(2) {
+  margin-bottom: 10%;
+}
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .admin_panel {
+    height: 100%;
+  }
+  .add_products form {
+    height: 300px;
+    top: 5px;
+  }
+  .add_products form input {
+    font-size: 12px;
+    margin-bottom: 2%;
+  }
+  .add_products form input:nth-last-child(2) {
+    margin-bottom: 3%;
+  }
+  .add_products h2 {
+    top: -10px;
+  }
+}
