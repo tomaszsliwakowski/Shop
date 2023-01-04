@@ -174,7 +174,7 @@ const PayDelivery = ({ cart_items }) => {
     setaddanim("active");
 
     setTimeout(() => {
-      navigate("/");
+      navigate("/Shop/");
       setaddanim("none");
     }, 1800);
   };

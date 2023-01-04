@@ -64,15 +64,15 @@ const Header = () => {
     await signOut(auth);
     showUserPanel();
     if (
-      location.pathname !== "/userpanel" &&
-      location.pathname !== "/admin/panel" &&
-      location.pathname !== "/admin/panel/*/admin/orders" &&
-      location.pathname !== "/admin/panel/*/admin/products" &&
-      location.pathname !== "/userpanel/*/user/order"
+      location.pathname !== "/Shop/userpanel" &&
+      location.pathname !== "/Shop/admin/panel" &&
+      location.pathname !== "/Shop/admin/panel/*/admin/orders" &&
+      location.pathname !== "/Shop/admin/panel/*/admin/products" &&
+      location.pathname !== "/Shop/userpanel/*/user/order"
     ) {
       navigate(location.pathname);
     } else {
-      navigate("/");
+      navigate("/Shop/");
     }
   };
 
@@ -88,7 +88,7 @@ const Header = () => {
     <header>
       <div className="header"></div>
       <div className="header__logo">
-        <Link to="/">Shop</Link>
+        <Link to="/Shop/">Shop</Link>
       </div>
       {active === "active" ? null : <Nav active={active} />}
       <div className="header__cart-login">
@@ -107,13 +107,16 @@ const Header = () => {
               <div className={"user-panel " + userPanel}>
                 {admin ? (
                   <Link
-                    to="/admin/panel/*/admin/orders"
+                    to="/Shop/admin/panel/*/admin/orders"
                     onClick={showUserPanel}
                   >
                     Admin Panel
                   </Link>
                 ) : (
-                  <Link to="/userpanel/*/user/order" onClick={showUserPanel}>
+                  <Link
+                    to="/Shop/userpanel/*/user/order"
+                    onClick={showUserPanel}
+                  >
                     User Panel
                   </Link>
                 )}
@@ -156,7 +159,7 @@ const Header = () => {
         )}
 
         <AiOutlineCloseCircle className="close_btn" onClick={switchcart} />
-        <Link to="/cart" onClick={switchcart}>
+        <Link to="/Shop/cart" onClick={switchcart}>
           Check Out
         </Link>
       </div>
@@ -172,15 +175,17 @@ const Header = () => {
                 <FaRegUser onClick={showUserPanel} />
                 <div className={"user-panel-hamb"}>
                   {admin ? (
-                    <Link to="/admin/panel/*/admin/orders">Admin Panel</Link>
+                    <Link to="/Shop/admin/panel/*/admin/orders">
+                      Admin Panel
+                    </Link>
                   ) : (
-                    <Link to="/userpanel/*/user/order">User Panel</Link>
+                    <Link to="/Shop/userpanel/*/user/order">User Panel</Link>
                   )}
                   <button onClick={logout}>Logout</button>
                 </div>
               </div>
             ) : (
-              <Link to="/login" className="user-login">
+              <Link to="/Shop/login" className="user-login">
                 Login
               </Link>
             )

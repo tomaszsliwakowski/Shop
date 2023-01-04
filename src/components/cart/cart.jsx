@@ -73,7 +73,7 @@ const Cart = ({ cart_items }) => {
         {cart_items.length === 0 ? (
           <div className="cart_empty">
             <h2>Your cart is empty</h2>
-            <Link to="/">Go to home page</Link>
+            <Link to="/Shop/">Go to home page</Link>
           </div>
         ) : (
           <div className="cart_full">
@@ -92,7 +92,7 @@ const Cart = ({ cart_items }) => {
                   {cart_items.map((item, id) => (
                     <li key={id}>
                       <div className="item_img">
-                        <Link to={`/products/${item.id}`}>
+                        <Link to={`/Shop/products/${item.id}`}>
                           <img src={item.img} alt="item" />
                         </Link>
                       </div>
@@ -129,9 +129,9 @@ const Cart = ({ cart_items }) => {
                 <p>Total amount </p> <p>{sum.toFixed(2)}$</p>
               </span>
               {user ? (
-                <Link to="/payDelivery">Go to delivery</Link>
+                <Link to="/Shop/payDelivery">Go to delivery</Link>
               ) : (
-                <Link to="/login">Go to delivery</Link>
+                <Link to="/Shop/login">Go to delivery</Link>
               )}
               <p className="cart_pay-info">
                 Finish placing orders - Products added to the basket do not mean

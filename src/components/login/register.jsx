@@ -35,7 +35,7 @@ function Register() {
 
   useEffect(() => {
     if (user !== "" && user !== null) {
-      navigate("/");
+      navigate("/Shop/");
     }
   }, [user, navigate]);
 

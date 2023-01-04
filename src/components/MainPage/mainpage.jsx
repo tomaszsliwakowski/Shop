@@ -18,18 +18,18 @@ const MainPage = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<Cart cart_items={cart_items} />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/Shop/" element={<Home />} />
+        <Route path="/Shop/products" element={<Products />} />
+        <Route path="/Shop/cart" element={<Cart cart_items={cart_items} />} />
+        <Route path="/Shop/login" element={<Login />} />
+        <Route path="/Shop/register" element={<Register />} />
         <Route
-          path="/payDelivery"
+          path="/Shop/payDelivery"
           element={<PayDelivery cart_items={cart_items} />}
         />
-        <Route path="/products/:productId" element={<SingleProduct />} />
-        <Route path="/userpanel/*" element={<Userpanel />} />
-        <Route path="/admin/panel/*" element={<Adminpanel />} />
+        <Route path="/Shop/products/:productId" element={<SingleProduct />} />
+        <Route path="/Shop/userpanel/*" element={<Userpanel />} />
+        <Route path="/Shop/admin/panel/*" element={<Adminpanel />} />
         <Route path="*" element={<Nopage />} />
       </Routes>
     </>

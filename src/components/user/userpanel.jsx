@@ -56,7 +56,7 @@ const Userpanel = () => {
           </span>
 
           <p className="menu_order">
-            <NavLink to="*/user/order">
+            <NavLink to="*user/order">
               <RiFileList2Line />
               Orders
             </NavLink>

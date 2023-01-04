@@ -31,7 +31,7 @@ const Login = () => {
 
   useEffect(() => {
     if (user !== "" && user !== null) {
-      navigate("/");
+      navigate("/Shop/");
     }
   }, [user, navigate]);
 
@@ -108,7 +108,7 @@ const Login = () => {
               {user ? (
                 <Link>Create an account</Link>
               ) : (
-                <Link to="/register">Create an account</Link>
+                <Link to="/Shop/register">Create an account</Link>
               )}
             </button>
           </div>

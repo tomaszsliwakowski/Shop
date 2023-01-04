@@ -50,7 +50,7 @@ const Home = () => {
             <div className="el1" key={id}>
               <div className="el2">
                 <p>Recomended</p>
-                <Link to={`/products/${item.id}`}>
+                <Link to={`/Shop/products/${item.id}`}>
                   <img src={item.img} alt="item" />
                 </Link>
               </div>

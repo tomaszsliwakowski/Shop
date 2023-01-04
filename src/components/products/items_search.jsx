@@ -6,7 +6,7 @@ const ItemSearch = ({ search_data, addToCart }) =>
   search_data.map((item, id) => (
     <div className="item" key={id}>
       <div className="image">
-        <Link to={`/products/${item.id}`}>
+        <Link to={`/Shop/products/${item.id}`}>
           <img src={item.img} alt="item" />
         </Link>
       </div>

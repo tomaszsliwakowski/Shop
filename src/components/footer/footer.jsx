@@ -19,9 +19,9 @@ const Footer = () => {
         </p>
       </div>
       <div className="foot_nav">
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/cart">Cart</Link>
+        <Link to="/Shop/">Home</Link>
+        <Link to="/Shop/products">Products</Link>
+        <Link to="/Shop/cart">Cart</Link>
       </div>
       <div className="foot_contact">
         <a href="tel: 530786458">
