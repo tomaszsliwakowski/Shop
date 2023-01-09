@@ -25,4 +25,5 @@ Paste in terminal
  - npm install --save redux
  - npm install --save uid
  - npm install --save firebase
+ - npm install react-icons --save
  - npm start 
