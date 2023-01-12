@@ -488,3 +488,13 @@ header {
     font-size: 20px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .user-login {
+    padding: 2px 30px;
+    top: 80px;
+  }
+  .list_opt.active {
+    width: 55%;
+  }
+}

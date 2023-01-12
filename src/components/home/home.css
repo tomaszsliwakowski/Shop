@@ -1,5 +1,5 @@
 .home {
-  height: 100%;
+  min-height: 93vh;
   background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -282,7 +282,9 @@
 @media screen and (max-width: 390px) {
   .home {
     min-height: 115vh;
-    max-height: 140vh;
+  }
+  .recommended {
+    gap: 30px;
   }
   .el3 button {
     bottom: -8%;

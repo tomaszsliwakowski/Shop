@@ -88,3 +88,9 @@
     color: lightblue;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .nav.active a {
+    padding: 2px 12px;
+  }
+}
