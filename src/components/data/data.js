@@ -72,7 +72,7 @@ const data_base = [
     count: 1,
     max_count: 8,
     promo: 567.39 * 0.7,
-    img: "https://f00.esfr.pl/foto/2/55206079313/8fc039053786c3bb0300a9370236eb4e/microsoft-xbox-series-x,55206079313_8.jpg",
+    img: "https://static.komputronik.pl/product-picture/6/XSERIESKONX-1.jpg",
     category: "electronics",
     rating: "4.9",
   },
