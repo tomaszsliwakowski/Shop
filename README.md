@@ -9,7 +9,7 @@ The project presents a shop where we can create an account and order available p
 
 ## Demo
 
-tomaszsliwakowski.github.io/Shop/
+https://tomaszsliwakowski.github.io/Shop/
 
 ## Installation
 
