@@ -110,14 +110,14 @@ const Header = () => {
                     to="/Shop/admin/panel/*/admin/orders"
                     onClick={showUserPanel}
                   >
-                    Admin Panel
+                    Panel
                   </Link>
                 ) : (
                   <Link
                     to="/Shop/userpanel/*/user/order"
                     onClick={showUserPanel}
                   >
-                    User Panel
+                    Panel
                   </Link>
                 )}
                 <button onClick={logout}>Logout</button>
@@ -144,7 +144,9 @@ const Header = () => {
                       <img src={item.img} alt="cart_item" />
                     </div>
                     <div className="cart_right">
-                      <p>{item.title}</p>
+                      <p>
+                        {item.title} {`(${item.count} pc)`}
+                      </p>
                       <p>{item.price}$</p>
                     </div>
                   </li>
@@ -167,7 +169,7 @@ const Header = () => {
         <div className="e_1" onClick={switchopt}></div>
         <div className="e_2" onClick={switchopt}></div>
         <div className="e_3" onClick={switchopt}></div>
-        <div className={"list_opt " + active}>
+        <div className={"list_opt " + active + `${user ? "log" : ""}`}>
           {active === "active" ? <Nav active={active} /> : null}
           {active === "active" ? (
             user ? (
@@ -175,11 +177,9 @@ const Header = () => {
                 <FaRegUser onClick={showUserPanel} />
                 <div className={"user-panel-hamb"}>
                   {admin ? (
-                    <Link to="/Shop/admin/panel/*/admin/orders">
-                      Admin Panel
-                    </Link>
+                    <Link to="/Shop/admin/panel/*/admin/orders">Panel</Link>
                   ) : (
-                    <Link to="/Shop/userpanel/*/user/order">User Panel</Link>
+                    <Link to="/Shop/userpanel/*/user/order">Panel</Link>
                   )}
                   <button onClick={logout}>Logout</button>
                 </div>

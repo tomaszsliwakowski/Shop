@@ -31,6 +31,7 @@ form {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding-top: 20px;
 }
 .login h2 {
   position: relative;
@@ -39,6 +40,8 @@ form {
 
 form input {
   width: 50%;
+  max-width: 450px;
+  height: 35px;
   padding: 5px 10px;
   border: 1px solid silver;
   border-radius: 20px;

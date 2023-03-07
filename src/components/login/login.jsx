@@ -7,21 +7,21 @@ import { onAuthStateChanged } from "firebase/auth";
 const Login = () => {
   const [fail_email, setfail_email] = useState(false);
   const [fail_passwd, setfail_passwd] = useState(false);
+  const [LoginError, setLoginError] = useState("");
   const navigate = useNavigate();
-
+  const [user, setuser] = useState("");
   const [form, setform] = useState({
     email: "",
     password: "",
   });
 
   const UpdateField = (e) => {
+    setLoginError("");
     setform({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
-
-  const [user, setuser] = useState("");
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -41,12 +41,24 @@ const Login = () => {
     if (form.email !== "" && form.password !== "") {
       try {
         await signInWithEmailAndPassword(auth, form.email, form.password);
+        setLoginError("");
       } catch (error) {
-        console.log(error.message);
+        setLoginError(() => {
+          console.log(error.message);
+          if (error.message.includes("user-not-found")) {
+            return "User not found";
+          } else if (error.message.includes("wrong-password")) {
+            return "Wrong password";
+          } else if (error.message.includes("too-many-requests")) {
+            return "Too many requests try again later or reset password";
+          } else {
+            return "Something went wrong";
+          }
+        });
       }
     }
   };
-
+  console.log(LoginError);
   const checkInputValue = () => {
     if (form.email === "") {
       setfail_email(true);
@@ -94,6 +106,7 @@ const Login = () => {
                 {fail_passwd ? (
                   <span>Enter the password. The field cannot be empty</span>
                 ) : null}
+                {LoginError !== "" ? <span>{LoginError}</span> : null}
               </div>
               <button onClick={login}>
                 <Link>Login</Link>

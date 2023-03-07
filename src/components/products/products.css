@@ -22,12 +22,14 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   position: relative;
-  top: 20px;
+  top: 10px;
+  gap: 20px;
 }
 
 .search__bar {
   background-color: white;
   height: 58%;
+  min-height: 30px;
   border-radius: 15px;
   width: 60%;
   margin: 0 auto;
@@ -80,7 +82,7 @@
   padding: 0 10px 0 5px;
   outline: none;
   border: none;
-  height: 30px;
+  height: 25px;
   color: black;
 }
 
