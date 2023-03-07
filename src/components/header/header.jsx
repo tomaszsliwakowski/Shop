@@ -8,7 +8,7 @@ import { AiOutlineShoppingCart, AiOutlineCloseCircle } from "react-icons/ai";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { auth } from "../../firebase/firebase-config";
 import { FaRegUser } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 const Header = () => {
   const item = useSelector((state) => state.addtocart);
@@ -100,7 +100,7 @@ const Header = () => {
           {user ? (
             <div className={"user-icon " + userPanel}>
               {userPanel === "active" ? (
-                <IoMdClose onClick={showUserPanel} />
+                <AiOutlineCaretDown onClick={showUserPanel} />
               ) : (
                 <FaRegUser onClick={showUserPanel} />
               )}

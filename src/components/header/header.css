@@ -96,10 +96,11 @@ header {
   background-color: white;
   position: absolute;
   top: 7vh;
+  left: 0;
   height: 93vh;
   width: 50%;
-  box-shadow: 0 0 10px silver;
-  border-radius: 10px;
+  box-shadow: 0 0 5px silver;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .cart__list.active h2 {
@@ -141,7 +142,7 @@ header {
 }
 
 .user-icon.active {
-  color: red;
+  color: black;
 }
 
 .user-panel.none {
@@ -221,6 +222,9 @@ header {
     align-items: center;
     flex-direction: column;
     gap: 10px;
+  }
+  .close_btn {
+    font-size: 25px;
   }
 
   .user-panel-hamb a {
@@ -513,5 +517,8 @@ header {
   }
   .list_opt.activelog {
     width: 55%;
+  }
+  .close_btn {
+    font-size: 20px;
   }
 }

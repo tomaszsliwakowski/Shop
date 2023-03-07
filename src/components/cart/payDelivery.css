@@ -15,6 +15,7 @@
   min-height: 920px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 .p_d_cart {
   margin: 0% auto 0% auto;
