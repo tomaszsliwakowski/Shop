@@ -11,6 +11,10 @@ The project presents a shop where we can create an account and order available p
 
 https://tomaszsliwakowski.github.io/Shop/
 
+Login
+email: test@gmail.com
+password: test123
+
 ## Installation
 
 Clone project code
